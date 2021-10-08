@@ -16,7 +16,6 @@ prev.addEventListener('click', () => {
         counter = totalImages - 1;
     }
     slideShow(counter);
-    console.log(counter);
 });
 
 
@@ -28,7 +27,6 @@ next.addEventListener('click', () => {
         counter = 0;
     }
     slideShow(counter);
-    console.log(counter);
 });
 
 
@@ -36,8 +34,8 @@ slideShow(counter);
 
 function slideShow(num) {
 
-    for (let y of images) {
-        y.style.display = "none";
+    for (let image of images) {
+        image.style.display = "none";
     }
 
     images[num].style.display = "block";
