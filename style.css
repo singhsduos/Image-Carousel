@@ -10,6 +10,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: url("/images/carousel-bg.jpg") center/cover no-repeat;
+
 }
 
 h1 {
@@ -131,6 +133,10 @@ span i {
   span i {
     font-size: 2rem !important;
   }
+
+  body {
+   height: 100vh;
+}
 }
 
 @media screen and (max-width: 700px) {
@@ -143,7 +149,7 @@ span i {
   .carouselImage h2 {
     font-size: 0.6rem;
   }
-  
+
   span i {
     font-size: 0.5rem !important;
   }
