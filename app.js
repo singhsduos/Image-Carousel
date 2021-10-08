@@ -87,6 +87,6 @@ function slideShowAuto() {
     captions[counter].style.display = "block";
 
     //timer for changing image automatic in 2 seconds
-    setTimeout(slideShowAuto, 2000);
+    setTimeout(slideShowAuto, 5000);
 
 }
