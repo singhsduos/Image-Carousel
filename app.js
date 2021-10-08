@@ -35,19 +35,58 @@ next.addEventListener('click', () => {
 
 
 slideShow(counter);
+slideShowAuto();
 
-// function for changing images on clicking buttons
+// function for changing images on clicking buttons and changing images
 function slideShow(num) {
+     
+    // loop for hiding all images initially
+    for (let image of images) {
+        image.style.display = "none";
 
+    }
+    
+    // loop for hiding all captions initially
+    for (let caption of captions) {
+        caption.style.display = "none";
+
+    }
+
+    // displaying particular image and caption of that image
+    images[num].style.display = "block";
+    captions[num].style.display = "block";
+
+}
+
+// functions for automatic changing images
+function slideShowAuto() {
+     
+    // loop for hiding all images initially
     for (let image of images) {
         image.style.display = "none";
 
     }
 
+     // loop for hiding all captions initially
+
     for (let caption of captions) {
         caption.style.display = "none";
 
     }
-    images[num].style.display = "block";
-    captions[num].style.display = "block";
+
+    // condition for preventing loop fail
+    if (counter < totalImages - 1) {
+        counter++;
+    }
+    else {
+        counter = 0;
+    }
+    
+    // displaying particular image and caption of that image
+    images[counter].style.display = "block";
+    captions[counter].style.display = "block";
+
+    //timer for changing image automatic in 2 seconds
+    setTimeout(slideShowAuto, 2000);
+
 }
