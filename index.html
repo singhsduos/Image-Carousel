@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Font-Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
     <title>Image Carousel</title>
 </head>
 
@@ -14,7 +18,6 @@
 
     <div class="container">
         <div class="carouselImage">
-            <img src="images/7.png" alt="image-7" id="lastImage">
             <img src="images/1.png" alt="image-1">
             <img src="images/2.png" alt="image-2">
             <img src="images/3.png" alt="image-3">
@@ -22,16 +25,31 @@
             <img src="images/5.png" alt="image-5">
             <img src="images/6.png" alt="image-6">
             <img src="images/7.png" alt="image-7">
-            <img src="images/1.png" alt="image-1" id="firstImage">
         </div>
-    </div>
-    <button id="btn-1">Prev</button>
-    <button id="btn-2">Next</button>
 
+        <span id="btn-1"><i class="fas fa-arrow-circle-left fa-2x"></i></span>
+        <span id="btn-2"><i class="fas fa-arrow-circle-right fa-2x"></i></span>
+
+    </div>
     <footer>
-        <nav>
-            <li></li>
-        </nav>
+        <div class="footer">
+            <div class="copyright">
+                <h2 class="text">JS Tip Carousel</h2>
+                <p class="copyText">Copyright &copy; 2021</p>
+            </div>
+
+            <div class="socialMedia">
+                <a href="https://github.com/singhsduos/Image-Carousel" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/neeleshsng/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://twitter.com/singhs_duos" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+            </div>
+        </div>
     </footer>
     <script src="app.js"></script>
 </body>

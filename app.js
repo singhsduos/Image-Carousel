@@ -1,41 +1,44 @@
-const container = document.querySelector('.container');
-const images = document.querySelectorAll('img');
+const images = document.querySelectorAll('.carouselImage img');
 
-const btn1 = document.querySelector('#btn-1');
-const btn2 = document.querySelector('#btn-2');
+const prev = document.querySelector('#btn-1');
+const next = document.querySelector('#btn-2');
 
-const firstImage = document.querySelector('#firstImage');
-const lastImage = document.querySelector('#lastImage');
 
-let counter = 0;
+var counter = 0;
 let totalImages = images.length;
 
-btn1.addEventListener('click', () => {
-    imageSlide('btn2');
-})
 
-btn2.addEventListener('click', () => {
-    imageSlide('btn1');
-})
 
-// function imageSlide(drxn) {
-//     if (drxn == 'btn2') {
-//         counter++;
-//         if (counter == totalImages) {
-//             counter = 0;
-//         }
-//     }
+prev.addEventListener('click', () => {
+    if (counter >= 1) {
+        counter--;
+    } else {
+        counter = totalImages - 1;
+    }
+    slideShow(counter);
+    console.log(counter);
+});
 
-//     else {
-//         if (counter == 0)
-//             counter == totalImages - 1;
-//         else {
-//             counter--;
-//         }
-//     }
-//     for (let i = 0; i < totalImages; i++) {
-//         images[i].classList.remove('main');
-//     }
-//     images[counter].classList.add('main');
-// }
 
+next.addEventListener('click', () => {
+    if (counter < totalImages - 1) {
+        counter++;
+    }
+    else {
+        counter = 0;
+    }
+    slideShow(counter);
+    console.log(counter);
+});
+
+
+slideShow(counter);
+
+function slideShow(num) {
+
+    for (let y of images) {
+        y.style.display = "none";
+    }
+
+    images[num].style.display = "block";
+}
