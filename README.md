@@ -1,7 +1,7 @@
 # JS Tip Carousel
 This is slide show of JS Tip images automatic and through buttons also.
 
-### <a href=https://singhsduos.github.io/Image-Carousel/" target="_blank">**Visit Now 🚀**</a>
+### <a href="https://jstipcarousel.netlify.app/" target="_blank">**Visit Now 🚀**</a>
 
 
 ## Things I learend
