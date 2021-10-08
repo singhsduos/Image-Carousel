@@ -18,24 +18,24 @@ btn2.addEventListener('click', () => {
     imageSlide('btn1');
 })
 
-function imageSlide(drxn) {
-    if (drxn == 'btn2') {
-        counter++;
-        if (counter == totalImages) {
-            counter = 0;
-        }
-    }
+// function imageSlide(drxn) {
+//     if (drxn == 'btn2') {
+//         counter++;
+//         if (counter == totalImages) {
+//             counter = 0;
+//         }
+//     }
 
-    else {
-        if (counter == 0)
-            counter == totalImages - 1;
-        else {
-            counter--;
-        }
-    }
-    for (let i = 0; i < totalImages; i++) {
-        images[i].classList.remove('main');
-    }
-    images[counter].classList.add('main');
-}
+//     else {
+//         if (counter == 0)
+//             counter == totalImages - 1;
+//         else {
+//             counter--;
+//         }
+//     }
+//     for (let i = 0; i < totalImages; i++) {
+//         images[i].classList.remove('main');
+//     }
+//     images[counter].classList.add('main');
+// }
 
